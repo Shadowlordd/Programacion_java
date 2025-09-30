@@ -1,0 +1,16 @@
+Se aplicó el principio de encapsulamiento en todas las clases (Estudiante, Materia, Carrera, Universidad) mediante:
+- Declaración de atributos como private para restringir el acceso directo.
+- Implementación de métodos get y set públicos para acceder y modificar los atributos de forma controlada.
+- Separación clara entre la lógica interna y la interfaz pública de cada clase.
+Esto asegura que los datos estén protegidos y que cualquier modificación pase por una capa de validación.
+-------------------------------------------------
+Relaciones entre Clases:::
+Se modelaron las siguientes relaciones:
+- Estudiante, Materia: Cada estudiante tiene una lista de materias (List<Materia>). Se implementaron métodos para agregar materias y calcular el promedio de calificaciones.
+- Carrera, Estudiante: La clase Carrera mantiene una lista de estudiantes. Se agregaron métodos para agregar, listar y buscar estudiantes por nombre.
+- Universidad , Estudiante: La clase Universidad también contiene una lista de estudiantes, representando una relación de agregación.
+-------------------------------------------------
+Se agregaron validaciones básicas en los métodos set para garantizar la integridad de los datos:
+- En Materia.setCalificacion(double calificacion), se verifica que la calificación esté entre 0.0 y 10.0.
+- En Estudiante.setEdad(int edad), se puede validar que la edad sea positiva y mayor a un mínimo razonable (por ejemplo, 16).
+- En Materia.setCreditos(int creditos), se puede validar que los créditos sean mayores que cero.
